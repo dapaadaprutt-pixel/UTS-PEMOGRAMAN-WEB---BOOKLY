@@ -3,6 +3,15 @@ Nama    : Ahdan Daffa Handriyanto
 NIM     : 312510375
 Kelas   : I252A   
 
+##Akun Login (dataPengguna)
+Email/password :  1.siti@gmail.com / siti123
+                  2.agus@gmail.com / agus123
+                  3.rini@gmail.com / rini123
+
+##Nomor DO Tracking Pengiriman (dataTracking)
+1.20230012: Atas nama Rina Wulandari (Ekspedisi JNE, Status: Dalam Perjalanan).
+2.20230013: Atas nama Agus Pranoto (Ekspedisi Pos Indonesia, Status: Selesai Antar / Dikirim).
+
 ## 1. Deskripsi Project
 
 Aplikasi Web Pemesanan Buku merupakan aplikasi berbasis web yang dirancang untuk memudahkan pengguna dalam melihat informasi buku, melakukan pemesanan, serta memantau status pesanan. Aplikasi ini juga menyediakan fitur autentikasi pengguna dan pengelolaan stok buku.
