@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bookly</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="dashboard.html">📚 Bookly</a></div>
+        <div class="nav-user">
+            <span id="userGreeting">Selamat Datang</span>
+            <a href="index.html" class="btn-logout" onclick="localStorage.removeItem('loggedInUser')">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <div class="welcome-banner">
+            <h1 id="greetingHeading">Selamat Datang!</h1>
+            <p>Kelola persediaan, pemesanan, dan pelacakan pengiriman buku Anda di sini.</p>
+        </div>
+
+        <h2 class="section-title">Menu Utama</h2>
+        <div class="dashboard-grid">
+            <a href="stok.html" class="dashboard-card">
+                <div class="card-icon">📦</div>
+                <h3>Informasi Stok / Katalog</h3>
+                <p>Lihat dan kelola katalog persediaan buku toko Anda.</p>
+            </a>
+            <a href="chackout.html" class="dashboard-card">
+                <div class="card-icon">🛒</div>
+                <h3>Halaman Pemesanan</h3>
+                <p>Proses checkout dan kelola pesanan pelanggan.</p>
+            </a>
+            <a href="tracking.html" class="dashboard-card">
+                <div class="card-icon">🚚</div>
+                <h3>Tracking Pengiriman</h3>
+                <p>Cek status dan lacak pengiriman pesanan melalui Nomor DO.</p>
+            </a>
+            <div class="dashboard-card" onclick="alert('Fitur Laporan Pemesanan sedang dalam pengembangan!')">
+                <div class="card-icon">📊</div>
+                <h3>Laporan Pemesanan</h3>
+                <p>Ringkasan statistik dan laporan penjualan berkala.</p>
+            </div>
+            <div class="dashboard-card" onclick="alert('Fitur History Transaksi sedang dalam pengembangan!')">
+                <div class="card-icon">📜</div>
+                <h3>History Transaksi</h3>
+                <p>Riwayat seluruh transaksi yang telah berhasil dilakukan.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

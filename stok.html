@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Stok - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="dashboard.html">📚 Bookly</a></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="stok.html" class="active">Stok Buku</a></li>
+            <li><a href="chackout.html">Checkout</a></li>
+            <li><a href="tracking.html">Tracking</a></li>
+        </ul>
+    </nav>
+
+    <div class="container main-content">
+        <div class="header-action">
+            <h2>Katalog & Informasi Stok Buku</h2>
+            <button class="btn btn-primary" onclick="openModal('addBookModal')">+ Tambah Stok Baru</button>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Kode Barang</th>
+                    <th>Cover Buku</th>
+                    <th>Nama Barang</th>
+                    <th>Jenis Barang</th>
+                    <th>Edisi</th>
+                    <th>Harga</th>
+                    <th>Stok</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="stokTableBody">
+                <!-- Data dinamis diisi oleh JS -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal Tambah Buku -->
+    <div id="addBookModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('addBookModal')">&times;</span>
+            <h3>Tambah Buku Baru</h3>
+            <form id="addBookForm">
+                <div class="form-group">
+                    <label>Nama Barang / Judul Buku</label>
+                    <input type="text" id="newJudul" required placeholder="Contoh: Pengantar Komunikasi">
+                </div>
+                <div class="form-group">
+                    <label>Jenis Barang</label>
+                    <input type="text" id="newJenis" required placeholder="Buku Ajar / Modul">
+                </div>
+                <div class="form-group">
+                    <label>Edisi</label>
+                    <input type="text" id="newEdisi" required placeholder="1">
+                </div>
+                <div class="form-group">
+                    <label>Harga (Rp)</label>
+                    <input type="number" id="newHarga" required placeholder="180000">
+                </div>
+                <div class="form-group">
+                    <label>Jumlah Stok</label>
+                    <input type="number" id="newStok" required placeholder="100">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Simpan Stok Baru</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

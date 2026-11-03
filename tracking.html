@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="dashboard.html">📚 Bookly</a></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="stok.html">Stok Buku</a></li>
+            <li><a href="chackout.html">Checkout</a></li>
+            <li><a href="tracking.html" class="active">Tracking</a></li>
+        </ul>
+    </nav>
+
+    <div class="container main-content">
+        <h2>Tracking Pengiriman Pesanan</h2>
+        
+        <div class="search-box">
+            <input type="text" id="doNumberInput" placeholder="Masukkan Nomor DO (Contoh: 20230012 atau 20230013)">
+            <button type="button" class="btn btn-primary" onclick="searchDO()">Cari Pengiriman</button>
+        </div>
+
+        <div id="trackingResult" class="tracking-card hidden">
+            <h3>Detail Pengiriman</h3>
+            <div class="tracking-info-grid">
+                <div><strong>No. Delivery Order:</strong> <span id="resDO">-</span></div>
+                <div><strong>Nama Pemesan:</strong> <span id="resNama">-</span></div>
+                <div><strong>Tanggal Kirim:</strong> <span id="resTanggal">-</span></div>
+                <div><strong>Jenis Paket:</strong> <span id="resPaket">-</span></div>
+                <div><strong>Ekspedisi:</strong> <span id="resEkspedisi">-</span></div>
+                <div><strong>Total Pembayaran:</strong> <span id="resTotal">-</span></div>
+            </div>
+
+            <h4 style="margin-top: 20px;">Status Pengiriman</h4>
+            <div class="progress-bar-container">
+                <div id="progressBar" class="progress-bar" style="width: 0%;"></div>
+            </div>
+            <p id="statusText" class="status-badge">Menunggu Search...</p>
+
+            <h4>Riwayat Perjalanan Paket</h4>
+            <ul id="timelineList" class="timeline">
+                <!-- Timeline items -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

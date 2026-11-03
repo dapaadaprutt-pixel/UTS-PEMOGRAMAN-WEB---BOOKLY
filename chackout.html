@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Buku - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="dashboard.html">📚 Bookly</a></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="stok.html">Stok Buku</a></li>
+            <li><a href="chackout.html" class="active">Checkout</a></li>
+            <li><a href="tracking.html">Tracking</a></li>
+        </ul>
+    </nav>
+
+    <div class="container main-content">
+        <h2>Form Pemesanan & Checkout</h2>
+        <div class="checkout-grid">
+            <!-- Keranjang Pesanan -->
+            <div class="checkout-card">
+                <h3>Daftar Pesanan</h3>
+                <div class="form-group">
+                    <label>Pilih Buku untuk Ditambahkan:</label>
+                    <div style="display: flex; gap: 10px;">
+                        <select id="selectBuku" class="form-control" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></select>
+                        <button type="button" class="btn btn-primary" onclick="addOrderRow()">Tambah</button>
+                    </div>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Cover</th>
+                            <th>Judul Buku</th>
+                            <th>Harga</th>
+                            <th>Qty</th>
+                            <th>Subtotal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTableBody">
+                        <!-- Items rendered via JS -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="4" style="text-align: right;">Total Bayar:</th>
+                            <th id="totalBayar">Rp 0</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Informasi Pemesan & Pembayaran -->
+            <div class="checkout-card">
+                <h3>Informasi Pemesan & Pembayaran</h3>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="namaPemesan">Nama Lengkap Pemesan</label>
+                        <input type="text" id="namaPemesan" required placeholder="Contoh: Rina Wulandari">
+                    </div>
+                    <div class="form-group">
+                        <label for="alamatPemesan">Alamat Pengiriman</label>
+                        <textarea id="alamatPemesan" rows="3" required placeholder="Jl. Raya Jakarta No. 123"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="metodePembayaran">Metode Pembayaran</label>
+                        <select id="metodePembayaran" required>
+                            <option value="">-- Pilih Metode Pembayaran --</option>
+                            <option value="Transfer Bank">Transfer Bank (BCA/Mandiri)</option>
+                            <option value="E-Wallet">E-Wallet (Gopay/OVO/Dana)</option>
+                            <option value="COD">Cash on Delivery (COD)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="jenisPaket">Jenis Paket Ekspedisi</label>
+                        <select id="jenisPaket" required>
+                            <option value="JNE Express">JNE Express</option>
+                            <option value="Pos Indonesia">Pos Indonesia</option>
+                            <option value="JNT Reguler">JNT Reguler</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Proses Pemesanan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
